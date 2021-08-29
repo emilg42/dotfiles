@@ -1,0 +1,48 @@
+# edit alias file
+alias aliases='$EDITOR ~/.aliases'
+
+# listing
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -lhA'
+
+# grepping
+alias dgrep='grep -rni --color'
+
+# directory changing
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# clipboard
+alias setclip='xclip -selection c'
+alias getclip='xclip -selection c -o'
+
+# useful defaults
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+
+# git
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+
+# laziness shorthands
+alias e='$EDITOR'
+alias c='clear'
+alias g='git'
+alias p='pacman'
+alias g='grep'
+alias vim='nvim'
+
+# additional
+alias getpass='openssl rand -base64 20'
+alias snippet='maim -s -u | xclip -selection clipboard -t image/png -i'
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+alias alert='notify-send --urgency=low'
