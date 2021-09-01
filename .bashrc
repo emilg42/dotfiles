@@ -3,7 +3,7 @@
 #   / __ \/ __ `/ ___/ __ \
 #  / /_/ / /_/ (__  ) / / /
 # /_.___/\__,_/____/_/ /_/ 
-#                         
+#
 # customized bashrc, v1.0
 
 # if not running interactively, don't do anything
@@ -74,6 +74,11 @@ up() {
     done
 }
 
+# last modification time
+when() {
+    date -d "@$(stat -c '%Y' $1)" "+%d-%m-%y, %H:%M"
+}
+
 # archive extraction
 ex () {
   if [ -f $1 ] ; then
@@ -109,6 +114,13 @@ repeat() {
 
 # quickly backup something
 bak() {
-    echo "copying $1 to $1.bak"
-    cp $1 $1.bak
+    echo "creating backup of '$1'"
+    ts=$(date '+%d-%m-%y, %H:%M')
+    if [ -d "$1" ]
+    then
+        cp -r $1 "$HOME/Backups/$(basename $1)_$ts/"
+    else
+        cp $1 "$HOME/Backups/$(basename $1)_$ts"
+    fi
 }
+
