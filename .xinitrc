@@ -52,5 +52,5 @@ dunst &                  # notification manager
 picom &                  # compositor
 ~/.fehbg &               # background image
 
-# dwmblocks &            # statusbar
+dwmblocks &              # statusbar
 exec dwm                 # window-manager

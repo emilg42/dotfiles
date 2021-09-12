@@ -4,7 +4,7 @@
 
     monitor                     = 0
     follow                      = mouse
-    geometry                    = "0x0-30+45"
+    geometry                    = "0x0-30+70"
     indicate_hidden             = yes
     sort                        = yes
     shrink                      = no

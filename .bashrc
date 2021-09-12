@@ -76,7 +76,7 @@ up() {
 
 # last modification time
 when() {
-    date -d "@$(stat -c '%Y' $1)" "+%d-%m-%y, %H:%M"
+    date -d "@$(stat -c '%Y' $1)" "+%d.%m.%y, %H:%M"
 }
 
 # archive extraction
